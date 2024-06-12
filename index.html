@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DIY Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar a {
+            color: #fff;
+        }
+
+        .jumbotron {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/free-photo/artist-tools-collection-frame_23-2148575571.jpg?t=st=1716975762~exp=1716979362~hmac=3c4c19269fb5feb77fdbda72c75da9c770c4e38e24e2f40b03636bcfe8094b6a&w=1480') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .jumbotron h1 {
+            color: #ffcc00;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            color: #ffcc00;
+            font-size: 1.5rem;
+        }
+
+        .jumbotron .icons {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .jumbotron .icons a {
+            color: #ffcc00;
+            margin-left: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .card {
+            margin-top: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            color: #333;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            color: #333;
+        }
+
+        .modal-header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .modal-footer .btn-primary {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image(1).png" alt="Bootstrap" width="100" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="E-commerceGallery.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:qureshishahana792@gmail.com">Contact </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" class="form-control" id="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" class="form-control" id="contact-email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="jumbotron text-center">
+        <div class="icons">
+            <a href="#" data-toggle="tooltip" title="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" data-toggle="modal" data-target="#loginModal" title="Login"><i class="fas fa-user"></i></a>
+        </div>
+        <h1>Craft Ocean</h1>
+        <p>Welcome to our DIY website!</p>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://1471793142.rsc.cdn77.org/data/images/full/51978/these-eco-friendly-projects-are-perfect-for-winter-renovations.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Eco-Friendly Projects</h5>
+                        <p class="card-text">Explore easy eco-friendly project ideas.</p>
+                        <a href="Eco-friendly ideas.html" class="btn btn-primary">Explore Ideas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/close-up-woman-sticking-paper-with-hot-glue-gun_23-2148188283.jpg?t=st=1716975398~exp=1716978998~hmac=6ac47e997b44cbe78cd745bd2cd75564f59811f966c23e5af7f1a5ea35515db0&w=996" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Get Started</h5>
+                        <p class="card-text">Learn how to get started with DIY projects.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                  </div>
+                <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/mom-daughter-mother-s-day_23-2147788267.jpg?t=st=1717142582~exp=1717146182~hmac=30a5a5158e04bdeb290f5c5e20afd77a5bc9a9d1f6d93f98032ce00b071d17e0&w=1480" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Unique DIY Mother’s Day Gifts</h5>
+                        <p class="card-text">DIY Mother’s Day gifts for every skill level and budget.</p>
+                        <a href="#" class="btn btn-primary">Explore More</a>
+                    </div>
+                </div>
+                      </div>
+                     <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/boxes-room_828688-3556.jpg?w=1380" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">DIY Organizing Ideas for Your Home</h5>
+                        <p class="card-text">Talking DIY organization (for your home) today!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/hand-gift-wrapping-paper-holiday-christmas-ribbon-bows_494741-14723.jpg?w=1480" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Popular Projects</h5>
+                        <p class="card-text">Check out our popular DIY projects.</p>
+                        <a href="#" class="btn btn-primary">View Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/smiling-students-looking-teacher-painting-pot_107420-29305.jpg?w=1480" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Community</h5>
+                        <p class="card-text">Join our DIY community and connect with others.</p>
+                        <a href="#" class="btn btn-primary">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 DIY Website. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
